@@ -59,7 +59,7 @@ jobs:
       # Important: Because we use pull_request_target, this checks out the base branch of the PR, not the PR itself.
       # We later build and run code from the base branch with access to secrets,
       # so it's important this is not the PRs code.
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           path: base
 
@@ -75,7 +75,7 @@ jobs:
           permission-administration: read
           permission-members: read
 
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ needs.get-merge-commit.outputs.mergedSha }}
           path: pr
@@ -101,7 +101,7 @@ jobs:
 
       # Important: Because we use pull_request_target, this checks out the base branch of the PR, not the PR head.
       # This is intentional, because we need to request the review of owners as declared in the base branch.
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # v2.0.6
         if: vars.OWNER_APP_ID

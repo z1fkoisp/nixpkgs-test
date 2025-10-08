@@ -39,7 +39,7 @@ jobs:
           sudo swapon /swap
 
       - name: Check out the PR at the test merge commit
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ needs.get-merge-commit.outputs.mergedSha }}
           path: nixpkgs
@@ -78,7 +78,7 @@ jobs:
           path: intermediate
 
       - name: Check out the PR at the test merge commit
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ needs.get-merge-commit.outputs.mergedSha }}
           fetch-depth: 2
@@ -202,7 +202,7 @@ jobs:
       # Important: This workflow job runs with extra permissions,
       # so we need to make sure to not run untrusted code from PRs
       - name: Check out Nixpkgs at the base commit
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
           ref: ${{ needs.get-merge-commit.outputs.targetSha }}
           path: base
