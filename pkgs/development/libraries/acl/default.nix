@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   version = "2.3.2";
 
   src = fetchurl {
-    url = "mirror://savannah/acl/acl-${version}.tar.gz";
+    url = "mirror://savannah/aclx/acl-${version}.tar.gz";
     hash = "sha256-XyvbrWKXB6p9hcYj+ZSqih0t7FWnPeUgW6wL9gWKL3w=";
   };
 
