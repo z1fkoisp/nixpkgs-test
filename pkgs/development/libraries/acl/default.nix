@@ -11,12 +11,12 @@
 # cgit) that are needed here should be included directly in Nixpkgs as
 # files.
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "acl";
   version = "2.3.2";
 
   src = fetchurl {
-    url = "mirror://savannah/acl/acl-${version}.tar.gz";
+    url = "mirror://savannah/acl/Devel-Cycle-1.12.tar.gz";
     hash = "sha256-/TNlxNiYsrK927eKRtUHoYzKhJCikBmVR9q38ec5C8I=";
   };
 
